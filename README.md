@@ -20,7 +20,7 @@ The dataset can be downloaded from Kaggle and comes in the form of 2GB splitted 
   <i>3 samples from a file</i>
 </p>
 
-As I don't have much RAM and only have one GPU, I adapted the project to my setup. I only load one of the seven files and my dataset is only composed of 15000 samples. Each training input is composed of the entity we want to predict with a "<norm>" token on each side to indicate the focus on this part, plus a context window of three entities each before and after the block to normalize.
+As I don't have much RAM and only have one GPU, I adapted the project to my setup. I only load one of the seven files and my dataset is only composed of 15000 samples. Each training input is composed of the entity we want to predict with a ```<norm>``` token on each side to indicate the focus on this part, plus a context window of three entities each before and after the block to normalize.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91634314/229868740-d9c5df01-66ee-4e8e-a50c-02e744b286a4.png?raw=true" alt="Sublime's custom image"/>
   <br>
@@ -33,5 +33,7 @@ As I don't have much RAM and only have one GPU, I adapted the project to my setu
   <i>Output of the neural network</i>
 </p>
 
-After setting up the input and the output, we want to tokenize (replace an entity in natural language by a number as the network only understands mathematics) our input character by character (except for NULL and <norm> which are not decomposed) and output word by word.
+After setting up the input and the output, we want to tokenize (replace an entity in natural language by a number as the network only understands mathematics) our input character by character (except for ```NULL``` and ```<norm>``` which are not decomposed) and output by word.
+
+### Neural network training
 
