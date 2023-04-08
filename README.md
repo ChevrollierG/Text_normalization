@@ -58,3 +58,32 @@ Accuracy plot for the traning (blue is training and orange is validation)
   <i>Ratio of loss following the number of epochs</i>
 </p>
 
+### Conclusion
+
+At this stage, the model is already really good as we have up to 94% accuracy and as we test it (see Results) we can see that the network recognize perfectly the structure of the sentence and predicts well each classes. Moreover, when the network has to predict the spoken form, if the word to predict is not in the output vocabulary, it won't be able to return it and will try to find a similar prediction.
+
+### Results
+
+<p align="center">
+  A baby girafe is 6 ft tall and weights 120 lb .
+  <br>
+  <i>Input</i>
+</p>
+
+<p align="center">
+  A baby girafe is six feats tall and weights one hundred twenty pounds .
+  <br>
+  <i>Ground truth</i>
+</p>
+
+<p align="center">
+  A baby girafe is three ft tall and weights one hundred lb .
+  <br>
+  <i>Prediction</i>
+</p>
+
+### Documentation
+
+Kaggle competition and dataset: https://www.kaggle.com/datasets/google-nlu/text-normalization
+
+Research paper: https://arxiv.org/ftp/arxiv/papers/1611/1611.00068.pdf
